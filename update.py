@@ -94,4 +94,19 @@ def launch_json():
 
 
 if __name__ == "__main__":
-    print launch_json()
+    output_json = None
+    
+    try:        
+        output_json = launch_json()
+       
+    except Exception as e:
+        # If anything goes wrong we simply don't update our file.
+        print 'Fail:'
+        print e
+        print '------'
+        
+    if json:
+        f = open('launch_schedule.json','w')    
+        f.write(output_json)
+        f.close
+        
