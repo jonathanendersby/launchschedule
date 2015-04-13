@@ -106,7 +106,7 @@ if __name__ == "__main__":
         print '------'
         
     if json:
-        f = open('launch_schedule.json','w')    
+        f = open('launchschedule.json','w')    
         f.write(output_json)
         f.close
         
